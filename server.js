@@ -6,6 +6,7 @@ const User = require('./model/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const session = require('express-session');
+const Score = require('./model/score');
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -347,7 +348,13 @@ app.get('/logout', function(req,res){
     res.redirect("/login.html");
 })
 
+// app.post('/api/createScore', async (req, res) => {
+//     const record = {username: req.session.email, score: req.body.}
 
+//     Score.create(record);
+
+//     res.json( { status: 'ok' } );
+// });
 
 
 app.use(express.json()) 
