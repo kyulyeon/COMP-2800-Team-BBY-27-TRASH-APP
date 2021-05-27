@@ -6,6 +6,8 @@ const User = require('./model/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const session = require('express-session');
+const request = require('request-promise');
+
 
 
 app.use(bodyParser.urlencoded({extended: true}));
